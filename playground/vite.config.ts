@@ -7,8 +7,19 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // 使用相对路径解析组件
+      // Playground 自身路径
       "@": path.resolve(__dirname, "./src"),
+      // 映射 @zenui/* 到 packages 目录
+      "@zenui/components": path.resolve(
+        __dirname,
+        "../packages/components/src",
+      ),
+      "@zenui/components/*": path.resolve(
+        __dirname,
+        "../packages/components/src/*",
+      ),
+      "@zenui/utils": path.resolve(__dirname, "../packages/utils/src"),
+      "@zenui/utils/*": path.resolve(__dirname, "../packages/utils/src/*"),
     },
   },
   css: {

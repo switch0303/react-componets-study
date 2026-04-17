@@ -1,5 +1,5 @@
-// 使用相对路径导入 Button 组件
-import { Button } from "../../packages/components/src/Button";
+// 直接从 packages 导入 Button 组件
+import { Button } from "../../../packages/components/src/Button";
 import "./App.css";
 
 function App() {
