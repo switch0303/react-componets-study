@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path Mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@zenui/components": ["./packages/components/src"],
+      "@zenui/components/*": ["./packages/components/src/*"],
+      "@zenui/hooks": ["./packages/hooks/src"],
+      "@zenui/hooks/*": ["./packages/hooks/src/*"],
+      "@zenui/utils": ["./packages/utils/src"],
+      "@zenui/utils/*": ["./packages/utils/src/*"],
+      "@zenui/theme": ["./packages/theme/src"],
+      "@zenui/theme/*": ["./packages/theme/src/*"],
+      "@zenui/icons": ["./packages/icons/src"],
+      "@zenui/icons/*": ["./packages/icons/src/*"]
+    }
+  },
+  "include": ["packages/*/src", "playground/src", "docs"],
+  "exclude": ["node_modules", "dist", "build"]
+}
