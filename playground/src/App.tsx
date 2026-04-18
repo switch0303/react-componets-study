@@ -1,5 +1,5 @@
-// 直接从 packages 导入 Button 组件
-import { Button } from "../../../packages/components/src/Button";
+// 使用 @zenui/components 别名导入 Button 组件
+import { Button } from "@zenui/components/Button";
 import "./App.css";
 
 function App() {
