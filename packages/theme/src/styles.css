@@ -1,0 +1,399 @@
+/* ========================================
+   ZenUI Theme - CSS Variables
+   ======================================== */
+
+/*
+ * 设计令牌 (Design Tokens)
+ * 定义了 ZenUI 组件库的所有设计变量
+ * 支持亮色/暗色主题切换
+ */
+
+/* ========================================
+   1. 基础颜色系统
+   ======================================== */
+
+:root {
+  /*  Slate 灰色系 - 用于中性色、背景、边框 */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Blue 蓝色系 - 用于主色 */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+
+  /* Red 红色系 - 用于危险/错误 */
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+
+  /* Green 绿色系 - 用于成功 */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-800: #166534;
+  --green-900: #14532d;
+  --green-950: #052e16;
+
+  /* Yellow/Amber 黄色系 - 用于警告 */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber-950: #451a03;
+
+  /* ========================================
+     2. 语义化颜色变量（亮色主题 - 默认）
+     ======================================== */
+
+  /* 背景色 */
+  --color-background: var(--slate-50);
+  --color-background-primary: var(--slate-100);
+  --color-background-secondary: var(--slate-200);
+
+  /* 前景色（文字） */
+  --color-foreground: var(--slate-900);
+  --color-foreground-primary: var(--slate-700);
+  --color-foreground-secondary: var(--slate-500);
+  --color-foreground-muted: var(--slate-400);
+
+  /* 主色调 */
+  --color-primary: var(--blue-600);
+  --color-primary-hover: var(--blue-700);
+  --color-primary-active: var(--blue-800);
+  --color-primary-foreground: #ffffff;
+
+  /* 次要色 */
+  --color-secondary: var(--slate-100);
+  --color-secondary-hover: var(--slate-200);
+  --color-secondary-active: var(--slate-300);
+  --color-secondary-foreground: var(--slate-900);
+
+  /* 强调色/幽灵色 */
+  --color-accent: var(--slate-100);
+  --color-accent-hover: var(--slate-200);
+  --color-accent-foreground: var(--slate-900);
+
+  /* 危险色 */
+  --color-destructive: var(--red-600);
+  --color-destructive-hover: var(--red-700);
+  --color-destructive-active: var(--red-800);
+  --color-destructive-foreground: #ffffff;
+
+  /* 成功色 */
+  --color-success: var(--green-600);
+  --color-success-hover: var(--green-700);
+  --color-success-foreground: #ffffff;
+
+  /* 警告色 */
+  --color-warning: var(--amber-500);
+  --color-warning-hover: var(--amber-600);
+  --color-warning-foreground: var(--slate-900);
+
+  /* 边框 */
+  --color-border: var(--slate-200);
+  --color-border-hover: var(--slate-300);
+  --color-border-active: var(--slate-400);
+
+  /* 输入框 */
+  --color-input: var(--slate-200);
+  --color-input-hover: var(--slate-300);
+  --color-input-focus: var(--blue-500);
+
+  /* 焦点环 */
+  --color-ring: var(--blue-500);
+  --color-ring-offset: #ffffff;
+
+  /* 禁用状态 */
+  --color-disabled: var(--slate-100);
+  --color-disabled-foreground: var(--slate-400);
+
+  /* ========================================
+     3. 间距系统
+     ======================================== */
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;    /* 4px */
+  --spacing-2: 0.5rem;     /* 8px */
+  --spacing-3: 0.75rem;    /* 12px */
+  --spacing-4: 1rem;       /* 16px */
+  --spacing-5: 1.25rem;    /* 20px */
+  --spacing-6: 1.5rem;     /* 24px */
+  --spacing-8: 2rem;       /* 32px */
+  --spacing-10: 2.5rem;    /* 40px */
+  --spacing-12: 3rem;      /* 48px */
+  --spacing-16: 4rem;      /* 64px */
+  --spacing-20: 5rem;      /* 80px */
+  --spacing-24: 6rem;      /* 96px */
+  --spacing-32: 8rem;      /* 128px */
+  --spacing-40: 10rem;     /* 160px */
+  --spacing-48: 12rem;     /* 192px */
+  --spacing-56: 14rem;     /* 224px */
+  --spacing-64: 16rem;     /* 256px */
+
+  /* ========================================
+     4. 字体系统
+     ======================================== */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* 字体大小 */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  --font-size-7xl: 4.5rem;      /* 72px */
+  --font-size-8xl: 6rem;        /* 96px */
+  --font-size-9xl: 8rem;        /* 128px */
+
+  /* 字重 */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* 行高 */
+  --line-height-3: 0.75rem;     /* 12px */
+  --line-height-4: 1rem;        /* 16px */
+  --line-height-5: 1.25rem;     /* 20px */
+  --line-height-6: 1.5rem;      /* 24px */
+  --line-height-7: 1.75rem;     /* 28px */
+  --line-height-8: 2rem;        /* 32px */
+  --line-height-9: 2.25rem;     /* 36px */
+  --line-height-10: 2.5rem;     /* 40px */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* 字间距 */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ========================================
+     5. 圆角系统
+     ======================================== */
+  --radius-none: 0px;
+  --radius-sm: 0.125rem;     /* 2px */
+  --radius-md: 0.375rem;     /* 6px */
+  --radius-lg: 0.5rem;       /* 8px */
+  --radius-xl: 0.75rem;      /* 12px */
+  --radius-2xl: 1rem;        /* 16px */
+  --radius-3xl: 1.5rem;      /* 24px */
+  --radius-full: 9999px;
+
+  /* ========================================
+     6. 阴影系统
+     ======================================== */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  
+  /* 焦点环阴影 */
+  --shadow-ring: 0 0 0 3px;
+
+  /* ========================================
+     7. 过渡和动画
+     ======================================== */
+  --transition-none: none;
+  --transition-all: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-colors: color, background-color, border-color, text-decoration-color, fill, stroke 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-opacity: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-shadow: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 动画时长 */
+  --duration-0: 0ms;
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+
+  /* 缓动函数 */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========================================
+     8. Z-Index 层级
+     ======================================== */
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-auto: auto;
+  
+  /* 语义化层级 */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ========================================
+   暗色主题
+   ======================================== */
+
+.dark {
+  /* 背景色 */
+  --color-background: var(--slate-950);
+  --color-background-primary: var(--slate-900);
+  --color-background-secondary: var(--slate-800);
+
+  /* 前景色（文字） */
+  --color-foreground: var(--slate-50);
+  --color-foreground-primary: var(--slate-200);
+  --color-foreground-secondary: var(--slate-400);
+  --color-foreground-muted: var(--slate-500);
+
+  /* 主色调 - 暗色主题使用更亮的蓝色 */
+  --color-primary: var(--blue-500);
+  --color-primary-hover: var(--blue-400);
+  --color-primary-active: var(--blue-300);
+  --color-primary-foreground: var(--slate-950);
+
+  /* 次要色 */
+  --color-secondary: var(--slate-800);
+  --color-secondary-hover: var(--slate-700);
+  --color-secondary-active: var(--slate-600);
+  --color-secondary-foreground: var(--slate-50);
+
+  /* 强调色/幽灵色 */
+  --color-accent: var(--slate-800);
+  --color-accent-hover: var(--slate-700);
+  --color-accent-foreground: var(--slate-50);
+
+  /* 危险色 */
+  --color-destructive: var(--red-500);
+  --color-destructive-hover: var(--red-400);
+  --color-destructive-active: var(--red-300);
+  --color-destructive-foreground: var(--slate-950);
+
+  /* 成功色 */
+  --color-success: var(--green-500);
+  --color-success-hover: var(--green-400);
+  --color-success-foreground: var(--slate-950);
+
+  /* 警告色 */
+  --color-warning: var(--amber-500);
+  --color-warning-hover: var(--amber-400);
+  --color-warning-foreground: var(--slate-950);
+
+  /* 边框 */
+  --color-border: var(--slate-800);
+  --color-border-hover: var(--slate-700);
+  --color-border-active: var(--slate-600);
+
+  /* 输入框 */
+  --color-input: var(--slate-800);
+  --color-input-hover: var(--slate-700);
+  --color-input-focus: var(--blue-500);
+
+  /* 焦点环 */
+  --color-ring: var(--blue-500);
+  --color-ring-offset: var(--slate-950);
+
+  /* 禁用状态 */
+  --color-disabled: var(--slate-800);
+  --color-disabled-foreground: var(--slate-600);
+
+  /* 阴影调整 - 暗色主题需要更强的阴影 */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+}
+
+/* ========================================
+   辅助类 - 屏幕阅读器专用
+   ======================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

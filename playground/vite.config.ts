@@ -20,6 +20,8 @@ export default defineConfig({
       ),
       "@zenui/utils": path.resolve(__dirname, "../packages/utils/src"),
       "@zenui/utils/*": path.resolve(__dirname, "../packages/utils/src/*"),
+      "@zenui/theme": path.resolve(__dirname, "../packages/theme/src"),
+      "@zenui/theme/*": path.resolve(__dirname, "../packages/theme/src/*"),
     },
   },
   css: {
